@@ -1,5 +1,7 @@
 import whois
 
-w=whois.whois("google.co.in")
+print("Enter website name")
+url=input()
+w=whois.whois(url)
 print(w['expiration_date'])
 print(w['domain_name'])
