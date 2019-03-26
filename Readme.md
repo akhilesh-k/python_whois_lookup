@@ -1,0 +1,1 @@
+A python script to perform a whois lookup for a website input by user. It outputs the domain name and the expiration date of the domain.
