@@ -1,6 +1,6 @@
 import whois
 
-def whois(url):
+def whois_lookup(url):
 	w=whois.whois(url)
 	print(w['expiration_date'])
 	print(w['domain_name'])
@@ -8,4 +8,4 @@ def whois(url):
 
 print("Enter website name")
 url=input()
-whois(url)
+whois_lookup(url)
