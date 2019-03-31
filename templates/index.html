@@ -1,14 +1,10 @@
-{% block body %}
-{% if session['logged_in'] %}
-<p>You're logged in already!</p>
-{% else %}
-<form action="/login" method="POST" style="padding-top:10%;offset:6px;padding-left:10%;">
-  <input type="username" name="username" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
+<form action="/search" method="POST" style="padding-top:10%;offset:6px;padding-left:10%;">
+  <input type="text" name="url" placeholder="Enter website url">
   <br>
-  <input type="submit" value="Log in">
+  <input type="submit" value="Search">
   <br>
-  <a href="/signup"><button type="button">SignUP </button> </a> 
 </form>
+
+{% if isset($_POST['url']) %}
+<p>hello</p>
 {% endif %}
-{% endblock %}
