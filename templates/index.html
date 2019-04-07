@@ -1,12 +1,17 @@
-<form action="/search" method="POST" style="padding-top:10%;offset:6px;padding-left:10%;">
+<form method="POST" style="padding-top:10%;offset:6px;padding-left:10%;">
   <input type="text" name="url" placeholder="Enter website url">
   <br>
   <input type="submit" value="Search">
   <br>
 </form>
+{% block body %}
+<table border = 1>
+{% for value in details %}
+            <tr>
+               <td> {{ value }} </td>
+            </tr>
 
-{% if isset($_POST['url']) %}
-{% for i in a %}
-<li> i </li>
+
 {% endfor %}
-{% endif %}
+</table>
+{% endblock %}
